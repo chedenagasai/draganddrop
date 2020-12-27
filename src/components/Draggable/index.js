@@ -1,18 +1,18 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 export default class Draggable extends Component {
 
   handleDrag = (e) => {
-
-     e.dataTransfer.setData("transfer",e.target.id);
+    e.dataTransfer.setData("test", e.target.id);
   }
   handleDragOver = (e) => {
     e.stopPropagation();
   }
   render() {
+    let { id, style } = this.props;
     return (
-      <div id={this.props.id} draggable={true} onDragStart={this.handleDrag} onDragOver={this.handleDragOver} style={this.props.style}>
+      <div id={id} draggable={true} onDragStart={this.handleDrag} onDragOver={this.handleDragOver} style={style}>
         {this.props.children}
       </div>
     );

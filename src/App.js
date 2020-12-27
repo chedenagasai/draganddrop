@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component, Fragment } from "react";
+import styled from "styled-components";
+import DragandDrop from "./components/DragandDrop";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const AppWrapper = styled.div`
+  width:100%;
+  padding:32px;
+  display:flex;
+  justify-content:center;
+`;
+const Container = styled.div`
+`;
+class App extends Component {
+
+  render() {
+    return (
+      <AppWrapper>
+        <Container>
+          <DragandDrop />
+        </Container>
+      </AppWrapper>
+    );
+  }
 }
 
 export default App;

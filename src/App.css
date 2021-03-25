@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.ms-Nav{
+  width: 208px;
+  height: auto;
+}
+
+.countdown-container,p{
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box ;
+  margin-left: 40px;
+}
